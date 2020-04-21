@@ -1,15 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - BackgroundMovement
     - CameraController
     - PlayerController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -26,6 +23,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
   sceneClasses:
     Assets/Scenes/base.unity:
     - Class: 1
@@ -48,6 +48,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -55,11 +59,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 12442}
+    - Class: 114
       Script: {instanceID: 12840}
     - Class: 114
       Script: {instanceID: 14634}
     - Class: 114
-      Script: {instanceID: 14916}
+      Script: {instanceID: 15004}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -763,7 +769,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 6e5d0bd868134b0774665382e1338efc
+      Hash: 3976131bfeae35b325ae29a7137bc698
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -815,12 +821,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
-  - hash:
-      serializedVersion: 2
-      Hash: 561dbc635b78e0d712da2adcfb8e57d9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackgroundMovement
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -914,4 +914,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/base.unity
-  playerPath: C:/Users/kigle/Desktop/JOC .exe/Joc2D.exe
+  playerPath: C:/Users/kigle/Documents/GitHub/M1UF4Videojoc/Joc2D/Z-JOC/Joc2D.exe
