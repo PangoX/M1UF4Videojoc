@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - GameController
     - PlayerController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -26,6 +27,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/base.unity:
     - Class: 1
@@ -59,14 +65,28 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 11418}
     - Class: 114
-      Script: {instanceID: 14634}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 15004}
+      Script: {instanceID: 11666}
+    - Class: 114
+      Script: {instanceID: 12444}
+    - Class: 114
+      Script: {instanceID: 12842}
+    - Class: 114
+      Script: {instanceID: 13360}
+    - Class: 114
+      Script: {instanceID: 14272}
+    - Class: 114
+      Script: {instanceID: 14636}
+    - Class: 114
+      Script: {instanceID: 15006}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -75,6 +95,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -125,6 +151,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: e2251e19f9a949eaeefce4df86254b0c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameController
   - hash:
       serializedVersion: 2
       Hash: a2113831d3323f931007e1b3812dc814
@@ -914,4 +946,5 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/base.unity
-  playerPath: C:/Users/kigle/Documents/GitHub/M1UF4Videojoc/Joc2D/Z-JOC/Joc2D.exe
+  playerPath: C:/Users/kigle/Documents/GitHub/M1UF4Videojoc/Joc2D/Draky Exe Setmana
+    2/Joc2D.exe
