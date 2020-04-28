@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateState (string state = null)
     {
-        if (state!= null)
+        if (state != null)
         {
             anim.Play(state);
         }
