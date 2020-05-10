@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
 
+    public GameObject leftBullet, rightBullet;
+
+    Transform Bullet;
 
     public float speedX;
     public float jumpSpeedY;
@@ -26,6 +29,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioPlayer = GetComponent<AudioSource>();
         rb.freezeRotation = true; // Mantener personaje estable
+        Bullet = transform.Find("Bullet");
+
     }
 
     // Update is called once per frame
@@ -73,6 +78,13 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+        // Shoots
+       if (Input.GetKeyDown(KeyCode.L))
+        {
+            Fire();
+        }
+
 
         // VOIDS 
     void MovePlayer(float playerSpeed)
@@ -127,4 +139,16 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+    public void Fire()
+    {
+        if (!facingRight)
+        {
+            Instantiate(rightBullet, Bullet.position, Quaternion.identity);
+        }
+        if (facingRight)
+        {
+            Instantiate(leftBullet, Bullet.position, Quaternion.identity);
+        }
+    }
     }
