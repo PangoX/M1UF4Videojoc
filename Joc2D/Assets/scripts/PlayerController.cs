@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioPlayer = GetComponent<AudioSource>();
         rb.freezeRotation = true; // Mantener personaje estable
-        Bullet = transform.Find("Bullet");
+       // Bullet = transform.Find("Bullet");
 
     }
 
@@ -80,10 +80,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Shoots
-       if (Input.GetKeyDown(KeyCode.L))
+      /* if (Input.GetKeyDown(KeyCode.L))
         {
             Fire();
-        }
+        }*/
 
 
         // VOIDS 
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-    public void Fire()
+  /*  public void Fire()
     {
         if (!facingRight)
         {
@@ -150,5 +150,5 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(leftBullet, Bullet.position, Quaternion.identity);
         }
-    }
+    }*/
     }
