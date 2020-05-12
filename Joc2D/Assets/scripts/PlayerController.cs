@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
 
     public GameObject leftBullet, rightBullet;
-
-    Transform Bullet;
+    Vector2 bulletPost;
+    public float fireRate = 0.5f;
+    float nexFire = 0.0f;
 
     public float speedX;
     public float jumpSpeedY;
@@ -80,10 +81,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // Shoots
-      /* if (Input.GetKeyDown(KeyCode.L))
+       if (Input.GetKeyDown(KeyCode.L) && Time.time > nexFire)
         {
+            nexFire = Time.time + fireRate;
             Fire();
-        }*/
+        }
 
 
         // VOIDS 
@@ -140,15 +142,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-  /*  public void Fire()
+    public void Fire()
     {
-        if (!facingRight)
+
+        bulletPost = transform.position;
+
+       if (!facingRight)
         {
-            Instantiate(rightBullet, Bullet.position, Quaternion.identity);
+            Instantiate(rightBullet, bulletPost, Quaternion.identity);
         }
-        if (facingRight)
+       if (facingRight)
         {
-            Instantiate(leftBullet, Bullet.position, Quaternion.identity);
+            Instantiate(leftBullet, bulletPost, Quaternion.identity);
         }
-    }*/
+    }
     }
