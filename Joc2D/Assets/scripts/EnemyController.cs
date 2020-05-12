@@ -32,7 +32,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //OnDrawGizmos();
 
         if (!facingRight)
         {
@@ -53,10 +52,5 @@ public class EnemyController : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
         }
-    }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(StartPoint.transform.position, EndPoint.transform.position);
     }
 }

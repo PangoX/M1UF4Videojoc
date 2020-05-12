@@ -5,8 +5,6 @@ using UnityEngine;
 public class BulletControler : MonoBehaviour
 {
 
-   // public float speedX = 5f;
-   // float speedY = 0f;
     public Vector2 speed;
     Rigidbody2D rb;
 
@@ -14,13 +12,12 @@ public class BulletControler : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       rb.velocity = speed;
+        rb.velocity = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-      // rb.velocity = new Vector2(speedX, speedY);
        rb.velocity = speed;
     }
 
@@ -29,6 +26,10 @@ public class BulletControler : MonoBehaviour
         if (collision.gameObject.CompareTag("ENEMY"))
         {
             Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("GROUND"))
+        {
             Destroy(gameObject);
         }
     }

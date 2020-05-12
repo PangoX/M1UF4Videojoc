@@ -3931,6 +3931,36 @@ Transform:
   m_Father: {fileID: 1809259830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1103050558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103050559}
+  m_Layer: 0
+  m_Name: firePos
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1103050559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103050558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.94, y: -0.483, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1329754699}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1113334021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4572,7 +4602,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.05, y: 17.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1103050559}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4593,6 +4624,7 @@ MonoBehaviour:
     type: 3}
   rightBullet: {fileID: 7804510367420121999, guid: a4c164ee35f0dd74cb105d4540bdc773,
     type: 3}
+  firePost: {fileID: 1103050559}
   fireRate: 0.5
   speedX: 5
   jumpSpeedY: 500
@@ -4842,7 +4874,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 02a93a09bf646c9429194f9f3fb54740, type: 3}
   m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
   m_FlipX: 0
@@ -6088,7 +6120,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 90
+  m_SortingOrder: 19
   m_Sprite: {fileID: 21300000, guid: 02a93a09bf646c9429194f9f3fb54740, type: 3}
   m_Color: {r: 0.028301895, g: 0.027901396, b: 0.027901396, a: 1}
   m_FlipX: 0
@@ -6287,7 +6319,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 110
+  m_SortingOrder: 21
   m_Sprite: {fileID: 21300000, guid: 02a93a09bf646c9429194f9f3fb54740, type: 3}
   m_Color: {r: 0.9811321, g: 0.06016379, b: 0.06016379, a: 1}
   m_FlipX: 0
@@ -7316,6 +7348,9 @@ MonoBehaviour:
     D = Walk Right
 
     W = Jump
+
+    L
+    = Shoots
 
 '
 --- !u!222 &2143597830

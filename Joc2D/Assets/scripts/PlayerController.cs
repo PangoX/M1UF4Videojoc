@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject leftBullet, rightBullet;
     Vector2 bulletPost;
+    public Transform firePost;
     public float fireRate = 0.5f;
     float nexFire = 0.0f;
 
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         audioPlayer = GetComponent<AudioSource>();
         rb.freezeRotation = true; // Mantener personaje estable
-       // Bullet = transform.Find("Bullet");
 
     }
 
@@ -145,15 +145,13 @@ public class PlayerController : MonoBehaviour
     public void Fire()
     {
 
-        bulletPost = transform.position;
-
        if (!facingRight)
         {
-            Instantiate(rightBullet, bulletPost, Quaternion.identity);
+            Instantiate(rightBullet, firePost.position, Quaternion.identity);
         }
        if (facingRight)
         {
-            Instantiate(leftBullet, bulletPost, Quaternion.identity);
+            Instantiate(leftBullet, firePost.position, Quaternion.identity);
         }
     }
     }
