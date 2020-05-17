@@ -15,6 +15,7 @@ public class FinalEnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (!facingRight)
         {
             transform.position = StartPoint.transform.position;
@@ -28,8 +29,6 @@ public class FinalEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //OnDrawGizmos();
-
         if (!facingRight)
         {
             transform.position = Vector3.MoveTowards(transform.position, EndPoint.transform.position, enemySpeed * Time.deltaTime);
@@ -49,10 +48,5 @@ public class FinalEnemyController : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
         }
-    }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(StartPoint.transform.position, EndPoint.transform.position);
     }
 }

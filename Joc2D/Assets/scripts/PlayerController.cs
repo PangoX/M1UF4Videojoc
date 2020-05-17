@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject game;
+
     private AudioSource audioPlayer;
     public AudioClip jumpClip;
     Animator anim;
@@ -22,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // bool gamePlaying = game.GetComponent<GameController>().gameState == GameState.Playing;
+
         // Player Movement
         MovePlayer(speed);
         Flip();
@@ -113,10 +119,12 @@ public class PlayerController : MonoBehaviour
             Jumping = false;
         }
 
-        if (collision.gameObject.tag == "WATER")
+        if (collision.gameObject.tag == "WATER" || collision.gameObject.tag == "ENEMY")
         {
-            anim.SetInteger("Status", 3);
-            UpdateState("Player-Die");
+           // Debug.Log("Die");
+            UpdateState("Player-DIE");
+            game.GetComponent<GameController>().gameState = GameState.Ended;
+
         }
 
     }

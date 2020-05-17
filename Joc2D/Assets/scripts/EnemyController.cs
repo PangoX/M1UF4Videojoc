@@ -13,12 +13,11 @@ public class EnemyController : MonoBehaviour
     private bool facingRight;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
+       
         rb.freezeRotation = true;
-
         if (!facingRight)
         {
             transform.position = StartPoint.transform.position;

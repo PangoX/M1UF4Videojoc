@@ -8,6 +8,7 @@ TagManager:
   - WATER
   - ENEMY
   - BARRERA
+  - BULLET
   layers:
   - Default
   - TransparentFX

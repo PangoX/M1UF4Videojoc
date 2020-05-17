@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4779643738703841485}
   m_Layer: 0
   m_Name: rightBullet
-  m_TagString: Untagged
+  m_TagString: BULLET
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,3 +183,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: -5, y: 0}
+  damageRef: 25

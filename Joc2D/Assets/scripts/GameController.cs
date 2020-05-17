@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public enum GameState { Idle, Playing, Ended } // Game States
 
 public class GameController : MonoBehaviour
 {
@@ -9,12 +12,12 @@ public class GameController : MonoBehaviour
     public float parallaxSpeed = 0.02f; 
     public RawImage background;
     public GameObject uiIdle;
-    public enum GameState { Idle, Playing } // Game States
-    public GameState gameState = GameState.Idle; // Idle Declaration
 
+
+
+
+    public GameState gameState = GameState.Idle;
     public GameObject player; // Player
-
-
 
 
 
@@ -27,9 +30,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool userAction = Input.GetKeyDown(KeyCode.Space);
+
         // Start Game
 
-        if (gameState == GameState.Idle && (Input.GetKeyDown(KeyCode.Space))){ //State Static + Swap States
+        if (gameState == GameState.Idle && userAction){ //State Static + Swap States
             gameState = GameState.Playing;
 
             uiIdle.SetActive(false); // Hide Instructions
@@ -39,11 +44,23 @@ public class GameController : MonoBehaviour
         {
             Parallax();
         }
+        else if (gameState == GameState.Ended)
+        {
+            if (userAction)
+            {
+                RestartGame();
+            }
+        }
     }
 
     void Parallax()
     {
         float finalSpeed = parallaxSpeed * Time.deltaTime;  // Variable Movement
         background.uvRect = new Rect(background.uvRect.x + finalSpeed, 0f, 1f, 1f); // Suma movement
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("base");
     }
 }

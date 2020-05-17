@@ -8,7 +8,15 @@ public class BulletControler : MonoBehaviour
     public Vector2 speed;
     Rigidbody2D rb;
 
+    public static float damage;
+    public float damageRef;
+
     // Start is called before the first frame update
+     void Awake()
+    {
+        damage = damageRef;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,14 +33,17 @@ public class BulletControler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ENEMY"))
         {
-            Destroy(collision.gameObject);
+            // Destroy(collision.gameObject);
             Destroy(gameObject);
         }
         if (collision.gameObject.CompareTag("GROUND"))
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("BARRERA"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
-
-
 }

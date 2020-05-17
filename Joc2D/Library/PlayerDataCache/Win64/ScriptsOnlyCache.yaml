@@ -4,9 +4,7 @@ ScriptsOnlyBuild:
     - BulletControler
     - CameraController
     - EnemyController
-    - FinalEnemyBar
-    - FinalEnemyController
-    - FirstEnemyBar
+    - EnemyManager
     - GameController
     - PlayerController
     Unity.2D.Animation.Editor.dll:
@@ -90,19 +88,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13362}
     - Class: 114
-      Script: {instanceID: 13364}
-    - Class: 114
       Script: {instanceID: 13722}
     - Class: 114
       Script: {instanceID: 14278}
     - Class: 114
       Script: {instanceID: 14642}
     - Class: 114
-      Script: {instanceID: 14956}
-    - Class: 114
       Script: {instanceID: 15016}
     - Class: 114
-      Script: {instanceID: 15094}
+      Script: {instanceID: 38692}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -622,12 +616,6 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FinalEnemyBar
-  - hash:
-      serializedVersion: 2
       Hash: 56df1fa7cea034df9863fe5a24200a32
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -700,7 +688,7 @@ ScriptsOnlyBuild:
     className: CinemachineMixingCamera
   - hash:
       serializedVersion: 2
-      Hash: d4b12e4ee9541266ac2681aeef7cb8c2
+      Hash: 435a4585d17eb868ee3b43d0eda5c45d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BulletControler
@@ -838,7 +826,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: c1e6829a5bc20144c2f91fea3e473ce4
+      Hash: 1dead5b4b17d4342ae6638e6f2d501a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -922,12 +910,6 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FirstEnemyBar
-  - hash:
-      serializedVersion: 2
       Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -998,8 +980,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9b40db7a35a53b4be07fd86cfa2a23c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/base.unity
   playerPath: C:/Users/kigle/Documents/GitHub/M1UF4Videojoc/Joc2D/Draky Exe Setmana
-    4/Joc2D.exe
+    5/Joc2D.exe
