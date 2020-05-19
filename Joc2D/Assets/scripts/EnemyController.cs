@@ -12,12 +12,17 @@ public class EnemyController : MonoBehaviour
     public float enemySpeed;
     private bool facingRight;
 
+    public float enemyHealth;
+    private float curHealth;
+
+    public GameObject healthBar;
+
 
     // Start is called before the first frame update
     void Start()
     {
        
-        rb.freezeRotation = true;
+       // rb.freezeRotation = true;
         if (!facingRight)
         {
             transform.position = StartPoint.transform.position;
@@ -26,6 +31,8 @@ public class EnemyController : MonoBehaviour
         {
             transform.position = EndPoint.transform.position;
         }
+
+        curHealth = enemyHealth;
     }
 
     // Update is called once per frame
@@ -51,5 +58,22 @@ public class EnemyController : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
         }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BULLET"))
+        {
+            curHealth -= BulletControler.damage;
+            float barLength = curHealth / enemyHealth;
+            SetHealthBar(barLength);
+            if (curHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+    public void SetHealthBar(float eHealth)
+    {
+        healthBar.transform.localScale = new Vector3(eHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 }

@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - BulletControler
     - CameraController
     - EnemyController
-    - EnemyManager
     - GameController
     - PlayerController
     Unity.2D.Animation.Editor.dll:
@@ -88,15 +87,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13362}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13720}
     - Class: 114
-      Script: {instanceID: 14278}
+      Script: {instanceID: 14276}
     - Class: 114
-      Script: {instanceID: 14642}
+      Script: {instanceID: 14640}
     - Class: 114
-      Script: {instanceID: 15016}
-    - Class: 114
-      Script: {instanceID: 38692}
+      Script: {instanceID: 15014}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -418,7 +415,7 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: 498bacb0308c0432b4f86cb1e355ddf8
+      Hash: 33d6a6d5a4196b4f38803d2e08d2b8e8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
@@ -886,6 +883,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 9b40db7a35a53b4be07fd86cfa2a23c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyManager
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -980,12 +983,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9b40db7a35a53b4be07fd86cfa2a23c9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: EnemyManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/base.unity

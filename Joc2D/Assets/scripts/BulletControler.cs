@@ -19,6 +19,7 @@ public class BulletControler : MonoBehaviour
 
     void Start()
     {
+        damage = damageRef;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = speed;
     }

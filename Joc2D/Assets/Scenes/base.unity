@@ -2036,7 +2036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.1900022, y: 0.00000072835155}
+  m_AnchoredPosition: {x: 2.1900022, y: 0}
   m_SizeDelta: {x: 4.38, y: 0.45}
   m_Pivot: {x: 0.9999999, y: 0.5}
 --- !u!114 &662199203
@@ -4094,7 +4094,7 @@ GameObject:
   - component: {fileID: 1241841818}
   - component: {fileID: 1241841817}
   m_Layer: 5
-  m_Name: EnemyHealthbar
+  m_Name: EnemyHealthbar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4227,8 +4227,8 @@ GameObject:
   - component: {fileID: 1329754697}
   - component: {fileID: 1329754702}
   - component: {fileID: 1329754700}
-  - component: {fileID: 1329754701}
   - component: {fileID: 1329754703}
+  - component: {fileID: 1329754701}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4313,7 +4313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329754696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.15, y: 18.34, z: 0}
+  m_LocalPosition: {x: -7.44, y: 18.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1103050559}
@@ -4538,7 +4538,6 @@ GameObject:
   - component: {fileID: 1413159581}
   - component: {fileID: 1413159580}
   - component: {fileID: 1413159579}
-  - component: {fileID: 1413159584}
   m_Layer: 0
   m_Name: Enemy_lvl_1
   m_TagString: ENEMY
@@ -4561,6 +4560,8 @@ MonoBehaviour:
   StartPoint: {fileID: 796325676}
   EndPoint: {fileID: 578420560}
   enemySpeed: 4
+  enemyHealth: 100
+  healthBar: {fileID: 662199201}
 --- !u!60 &1413159580
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4912,20 +4913,6 @@ Transform:
   m_Father: {fileID: 1427544016}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1413159584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413159578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4343ffeeb138b4b4fac2eb1471123ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 100
-  healthBar: {fileID: 662199201}
 --- !u!1 &1427544015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,7 +5743,6 @@ GameObject:
   - component: {fileID: 1633495226}
   - component: {fileID: 1633495225}
   - component: {fileID: 1633495224}
-  - component: {fileID: 1633495223}
   m_Layer: 0
   m_Name: FinalEnemy
   m_TagString: ENEMY
@@ -5779,20 +5765,6 @@ Transform:
   m_Father: {fileID: 1174665153}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1633495223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633495221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4343ffeeb138b4b4fac2eb1471123ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 200
-  healthBar: {fileID: 1473374947}
 --- !u!114 &1633495224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5808,6 +5780,8 @@ MonoBehaviour:
   StartPoint: {fileID: 1770687590}
   EndPoint: {fileID: 1081047954}
   enemySpeed: 4
+  enemyHealth: 200
+  healthBar: {fileID: 1473374947}
 --- !u!60 &1633495225
 PolygonCollider2D:
   m_ObjectHideFlags: 0
