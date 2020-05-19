@@ -4334,6 +4334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   game: {fileID: 181465506}
   jumpClip: {fileID: 8300000, guid: 1534fc1c46699bd43ac431c838acf6eb, type: 3}
+  shootClip: {fileID: 8300000, guid: 6bd4823440eab7e4391f19e57d2d7dfb, type: 3}
   leftBullet: {fileID: 4045383577055740250, guid: 8eca0ce07cbd3a340b03203aa8f90b07,
     type: 3}
   rightBullet: {fileID: 7804510367420121999, guid: a4c164ee35f0dd74cb105d4540bdc773,

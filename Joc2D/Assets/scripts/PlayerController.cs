@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpClip;
     Animator anim;
     Rigidbody2D rb;
+    public AudioClip shootClip;
 
     public GameObject leftBullet, rightBullet;
     Vector2 bulletPost;
@@ -156,10 +157,14 @@ public class PlayerController : MonoBehaviour
        if (!facingRight)
         {
             Instantiate(rightBullet, firePost.position, Quaternion.identity);
+            audioPlayer.clip = shootClip;
+            audioPlayer.Play();
         }
        if (facingRight)
         {
             Instantiate(leftBullet, firePost.position, Quaternion.identity);
+            audioPlayer.clip = shootClip;
+            audioPlayer.Play();
         }
     }
     }
