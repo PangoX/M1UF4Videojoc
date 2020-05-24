@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject game;
+    public GameObject game; 
 
-    private AudioSource audioPlayer;
-    public AudioClip jumpClip;
+    private AudioSource audioPlayer; // Pista de so background
+    public AudioClip jumpClip; // Pista de so del salt
     Animator anim;
     Rigidbody2D rb;
-    public AudioClip shootClip;
+    public AudioClip shootClip; // Pista de so al disparar
 
-    public GameObject leftBullet, rightBullet;
-    Vector2 bulletPost;
-    public Transform firePost;
-    public float fireRate = 0.5f;
+    public GameObject leftBullet, rightBullet; // Prefabs de les bales
+    Vector2 bulletPost; // Spawn bales
+    public Transform firePost;// Spawn bales
+    public float fireRate = 0.5f; // Cadencia de les bales
     float nexFire = 0.0f;
 
-    public float speedX;
-    public float jumpSpeedY;
+    public float speedX; // Velocitat de l'x
+    public float jumpSpeedY; // Velocitat del salt
     bool facingRight, Jumping;
-    float speed;
+    float speed; // Velocitat
 
 
 
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
        // bool gamePlaying = game.GetComponent<GameController>().gameState == GameState.Playing;
 
         // Player Movement
-        MovePlayer(speed);
+        MovePlayer(speed); 
         Flip();
         MovePlayer(speed);
 
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
 
         // VOIDS 
-    void MovePlayer(float playerSpeed)
+    void MovePlayer(float playerSpeed) // Void moviment Player
         {
           if (playerSpeed < 0 && !Jumping || playerSpeed > 0 && !Jumping)
            {
@@ -112,19 +112,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // Colisions del Jugador
     {
-        if (collision.gameObject.tag == "GROUND")
+        if (collision.gameObject.tag == "GROUND") // Contacte amb GROUND mode IDLE no salta
         {
             anim.SetInteger("Status", 0);
             Jumping = false;
         }
 
-        if (collision.gameObject.tag == "WATER" || collision.gameObject.tag == "ENEMY")
+        if (collision.gameObject.tag == "WATER" || collision.gameObject.tag == "ENEMY") // Quan fa contacte amb WATER ENEMY pasa a estat DIE
         {
            // Debug.Log("Die");
             UpdateState("Player-DIE");
-            game.GetComponent<GameController>().gameState = GameState.Ended;
+            game.GetComponent<GameController>().gameState = GameState.Ended; // L'estat del joc pasa a ENDED
 
         }
 
@@ -151,16 +151,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-    public void Fire()
+    public void Fire() // Void per disparar
     {
 
-       if (!facingRight)
+       if (!facingRight) // Disparar mirant  a l'esquerra + so
         {
             Instantiate(rightBullet, firePost.position, Quaternion.identity);
             audioPlayer.clip = shootClip;
             audioPlayer.Play();
         }
-       if (facingRight)
+       if (facingRight) // Dispara mirant a la dreta + so
         {
             Instantiate(leftBullet, firePost.position, Quaternion.identity);
             audioPlayer.clip = shootClip;

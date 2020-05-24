@@ -8,13 +8,13 @@ public class BulletControler : MonoBehaviour
     public Vector2 speed;
     Rigidbody2D rb;
 
-    public static float damage;
-    public float damageRef;
+    public static float damage; // Dany Bala
+    public float damageRef; // Dany bala grafic al Game
 
     // Start is called before the first frame update
      void Awake()
     {
-        damage = damageRef;
+        damage = damageRef; // Equivalencia
     }
 
     void Start()
@@ -30,18 +30,17 @@ public class BulletControler : MonoBehaviour
        rb.velocity = speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // Colisions de les bales
     {
-        if (collision.gameObject.CompareTag("ENEMY"))
-        {
-            // Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("GROUND"))
+        if (collision.gameObject.CompareTag("ENEMY")) // Desapareix la bala amb contacte ENEMY
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("BARRERA"))
+        if (collision.gameObject.CompareTag("GROUND")) // Desapareix la bala amb contacte GROUND
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("BARRERA")) // Desapareix la bala i la barrera amb contace BARRERA
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
